@@ -27,15 +27,23 @@ let b2 = false;
 let b3 = false;
 let b4 = false;
 
+// calculating total price and grand price
+let totalPrice = 0;
+let grandPrice = 0;
+
+// applying coupon code 
+let couponValue = 0;
+
+
+
+
+
 // Adding bg-[#1DD100] to every button while they are clicked by adding an eventlistner
 // increasing selectedTotalSeat number
 // decrease the avaiable seat number
 
 
     btnA1.addEventListener('click',function(){
-        // btnA1.style.backgroundColor = '#1DD100';
-       
-        
         if( ! btnA1.classList.contains('bg-[#1DD100]') && a1 == false && count <= 4){
             btnA1.classList.add('bg-[#1DD100]' )
             selectedTotalSeat = selectedTotalSeat + 1;
@@ -61,9 +69,44 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
-     
-            
+
+
+            const pricelabel = document.getElementById('total-price');
+            const priceText = parseFloat(pricelabel.innerText);
+    
+            totalPrice = priceText;
+            totalPrice += 550;
+    
+            pricelabel.innerText = totalPrice;
+    
+    
+            const grandPriceLabel = document.getElementById('grand-price')
+            const grandPriceText = parseFloat(grandPriceLabel.innerText);
+
+
+            grandPrice = totalPrice;
+            grandPriceLabel.innerText = grandPrice;
+            // checking the coupon code 
+            document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+            const couponeText = event.target.value;
+            document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                if(couponeText == 'NEW15'){
+                    grandPrice = totalPrice - (totalPrice * 0.15);
+                 }else if(couponeText == 'Couple 20'){
+                    grandPrice = totalPrice - (totalPrice * 0.20);
+                 }else{
+                    
+                 }
+
+                 grandPriceLabel.innerText = grandPrice;
+
+                 })
+            })
+
         }
+
+        
+
        
     })
     btnA2.addEventListener('click',function(){
@@ -93,8 +136,43 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
-     
+
+            const pricelabel = document.getElementById('total-price');
+        const priceText = parseFloat(pricelabel.innerText);
+
+        totalPrice = priceText;
+        totalPrice += 550;
+
+        pricelabel.innerText = totalPrice;
+
+
+        const grandPriceLabel = document.getElementById('grand-price')
+        const grandPriceText = parseFloat(grandPriceLabel.innerText);
+
+
+            grandPrice = totalPrice;
+            grandPriceLabel.innerText = grandPrice;
+            // checking the coupon code 
+            document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+            const couponeText = event.target.value;
+            document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                if(couponeText == 'NEW15'){
+                    grandPrice = totalPrice - (totalPrice * 0.15);
+                 }else if(couponeText == 'Couple 20'){
+                    grandPrice = totalPrice - (totalPrice * 0.20);
+                 }else{
+                    
+                 }
+
+                 grandPriceLabel.innerText = grandPrice;
+
+                 })
+            })
+
+
+           
         }
+       
         
     })
     btnA3.addEventListener('click',function(){
@@ -122,8 +200,46 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
+
+
+
+            const pricelabel = document.getElementById('total-price');
+        const priceText = parseFloat(pricelabel.innerText);
+
+        totalPrice = priceText;
+        totalPrice += 550;
+
+        pricelabel.innerText = totalPrice;
+
+
+        const grandPriceLabel = document.getElementById('grand-price')
+        const grandPriceText = parseFloat(grandPriceLabel.innerText);
+        
+        grandPrice = totalPrice;
+        grandPriceLabel.innerText = grandPrice;
+       // checking the coupon code 
+       document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+        const couponeText = event.target.value;
+        document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+            if(couponeText == 'NEW15'){
+                grandPrice = totalPrice - (totalPrice * 0.15);
+             }else if(couponeText == 'Couple 20'){
+                grandPrice = totalPrice - (totalPrice * 0.20);
+             }else{
+                
+             }
+
+             grandPriceLabel.innerText = grandPrice;
+
+             })
+        })
+
+            
      
         }
+        
+
+
       
     })
     btnA4.addEventListener('click',function(){
@@ -151,8 +267,46 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
+
+
+
+            const pricelabel = document.getElementById('total-price');
+        const priceText = parseFloat(pricelabel.innerText);
+
+        totalPrice = priceText;
+        totalPrice += 550;
+
+        pricelabel.innerText = totalPrice;
+
+
+        const grandPriceLabel = document.getElementById('grand-price')
+        const grandPriceText = parseFloat(grandPriceLabel.innerText);
+        
+        grandPrice = totalPrice;
+        grandPriceLabel.innerText = grandPrice;
+        // checking the coupon code 
+        document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+            const couponeText = event.target.value;
+            document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                if(couponeText == 'NEW15'){
+                    grandPrice = totalPrice - (totalPrice * 0.15);
+                 }else if(couponeText == 'Couple 20'){
+                    grandPrice = totalPrice - (totalPrice * 0.20);
+                 }else{
+                    
+                 }
+
+                 grandPriceLabel.innerText = grandPrice;
+
+                 })
+            })
+
+
+            
+            
      
         }
+        
        
     })
     btnB1.addEventListener('click',function(){
@@ -180,9 +334,44 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
+
+
+            const pricelabel = document.getElementById('total-price');
+        const priceText = parseFloat(pricelabel.innerText);
+
+        totalPrice = priceText;
+        totalPrice += 550;
+
+        pricelabel.innerText = totalPrice;
+
+
+        const grandPriceLabel = document.getElementById('grand-price')
+        const grandPriceText = parseFloat(grandPriceLabel.innerText);
+        
+        grandPrice = totalPrice;
+        grandPriceLabel.innerText = grandPrice;
+        // checking the coupon code 
+        document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+            const couponeText = event.target.value;
+            document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                if(couponeText == 'NEW15'){
+                    grandPrice = totalPrice - (totalPrice * 0.15);
+                 }else if(couponeText == 'Couple 20'){
+                    grandPrice = totalPrice - (totalPrice * 0.20);
+                 }else{
+                    
+                 }
+
+                 grandPriceLabel.innerText = grandPrice;
+
+                 })
+            })
+
+
+           
      
         }
-       
+        
     })
     btnB2.addEventListener('click',function(){
         
@@ -209,9 +398,43 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
+
+
+            const pricelabel = document.getElementById('total-price');
+        const priceText = parseFloat(pricelabel.innerText);
+
+        totalPrice = priceText;
+        totalPrice += 550;
+
+        pricelabel.innerText = totalPrice;
+
+
+        const grandPriceLabel = document.getElementById('grand-price')
+        const grandPriceText = parseFloat(grandPriceLabel.innerText);
+        
+        grandPrice = totalPrice;
+        grandPriceLabel.innerText = grandPrice;
+        // checking the coupon code 
+        document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+            const couponeText = event.target.value;
+            document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                if(couponeText == 'NEW15'){
+                    grandPrice = totalPrice - (totalPrice * 0.15);
+                 }else if(couponeText == 'Couple 20'){
+                    grandPrice = totalPrice - (totalPrice * 0.20);
+                 }else{
+                    
+                 }
+
+                 grandPriceLabel.innerText = grandPrice;
+
+                 })
+            })
+
+            
      
         }
-       
+        
        
     })
     btnB3.addEventListener('click',function(){
@@ -239,8 +462,45 @@ let b4 = false;
      
             </div>`;
             dynamicSeat.appendChild(newSeatBooking);
+
+
+
+            const pricelabel = document.getElementById('total-price');
+            const priceText = parseFloat(pricelabel.innerText);
+    
+            totalPrice = priceText;
+            totalPrice += 550;
+    
+            pricelabel.innerText = totalPrice;
+    
+    
+            const grandPriceLabel = document.getElementById('grand-price')
+            const grandPriceText = parseFloat(grandPriceLabel.innerText);
+            
+            grandPrice = totalPrice;
+            grandPriceLabel.innerText = grandPrice;
+            // checking the coupon code 
+            document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+                const couponeText = event.target.value;
+                document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                    if(couponeText == 'NEW15'){
+                        grandPrice = totalPrice - (totalPrice * 0.15);
+                     }else if(couponeText == 'Couple 20'){
+                        grandPrice = totalPrice - (totalPrice * 0.20);
+                     }else{
+                        
+                     }
+    
+                     grandPriceLabel.innerText = grandPrice;
+    
+                     })
+                })
+    
+       
+           
      
         }
+        
        
        
     })
@@ -271,22 +531,38 @@ let b4 = false;
             dynamicSeat.appendChild(newSeatBooking);
 
 
-            // calculation of prices
-            const totalPriceLabel = document.getElementById('total-price');
-            const grandPriceLabel = document.getElementById('grand-price');
-       
-            let totalPrice = Number.parseInt(totalPriceLabel.innerText);
-            totalPrice = total
-            total = total + 550;
-            totalPriceLabel.innerText = total;
 
-            let grandPrice = Number.parseInt(grandPriceLabel.innerText);
-            grandPrice = grand;
+            const pricelabel = document.getElementById('total-price');
+        const priceText = parseFloat(pricelabel.innerText);
 
-            grand = total;
-            grandPriceLabel.innerText = grand;
-     
+        totalPrice = priceText;
+        totalPrice += 550;
+
+        pricelabel.innerText = totalPrice;
+
+
+        const grandPriceLabel = document.getElementById('grand-price')
+        const grandPriceText = parseFloat(grandPriceLabel.innerText);
+        
+        grandPrice = totalPrice;
+        grandPriceLabel.innerText = grandPrice;
+        // checking the coupon code 
+        document.getElementById('add-cuppon-here').addEventListener('keyup',function(event){
+            const couponeText = event.target.value;
+            document.getElementById('apply-cuppon-btn').addEventListener('click',function(){
+                if(couponeText == 'NEW15'){
+                    grandPrice = totalPrice - (totalPrice * 0.15);
+                 }else if(couponeText == 'Couple 20'){
+                    grandPrice = totalPrice - (totalPrice * 0.20);
+                 }else{
+                    
+                 }
+                 grandPriceLabel.innerText = grandPrice;
+
+                 })
+            })
         }
+        
        
        
     })
@@ -304,32 +580,3 @@ function purchase(){
     availableSeatLeft.innerText = totalAvailableSeat;
 }
 
-
-
-// increasing value of selected seat numbers
-console.log(selectedTotalSeat);
-console.log(totalAvailableSeat);
-
-function dynamicallyAddedSeat(seatName){
-
-       const dynamicSeat = document.getElementById('dynamicially-added-seat');
-       const newSeatBooking = document.createElement('newSeatBooking');
-
-       newSeatBooking.innerHTML = 
-       `<div class="flex flex-row justify-between">
-            <div id="seat-name">
-              <p>A1</p>
-            </div>
-            <div>
-              <p>Economy</p>
-            </div>
-            <div>
-              <p>550</p>
-            </div>
-
-       </div>`;
-       dynamicSeat.appendChild(newSeatBooking);
-
-    //    const selectedSeatName = document.getElementById('seat-name');
-    //    selectedSeatName.innerHTML = seatName;
-}
