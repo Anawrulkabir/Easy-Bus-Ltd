@@ -100,23 +100,27 @@ buttonA1.addEventListener('click', function (){
        const dynamicSeat = document.getElementById('dynamicially-added-seat');
        const newSeatBooking = document.createElement('newSeatBooking');
 
-       newSeatBooking.innerHTML = `<div class="flex flex-row justify-between">
-       <div>
-           <p>A1</p>
-       </div>
-       <div>
-           <p>Economy</p>
-       </div>
-       <div>
-           <p>550</p>
-       </div>
+       newSeatBooking.innerHTML = 
+       `<div class="flex flex-row justify-between">
+            <div>
+              <p>A1</p>
+            </div>
+            <div>
+              <p>Economy</p>
+            </div>
+            <div>
+              <p>550</p>
+            </div>
 
-   </div>`;
+       </div>`;
 
 
        dynamicSeat.appendChild(newSeatBooking);
 
 
+       const totalPriceLabel = document.getElementById('total-price');
+       const grandPriceLabel = document.getElementById('grand-price');
+       
        let totalPrice = Number.parseInt(totalPriceLabel.innerText);
        totalPrice = total
        total = total + 550;
