@@ -103,6 +103,31 @@ let couponValue = 0;
                  })
             })
 
+
+
+            // checking passenger name & phone number input box is empty or not 
+            document.getElementById('passenger-name-textarea').addEventListener('keyup',function(event){
+                const inputText = event.target.value;
+                const inputLength = inputText.length;
+                //console.log(inputLength);
+
+                if(inputLength > 0){
+                    const showModal = document.getElementById('show-modal');
+                    showModal.classList.remove('hidden');
+                }
+            })
+            document.getElementById('phone-number-textarea').addEventListener('keyup',function(event){
+                const numText = event.target.value;
+                const numLength = numText.length;
+                //console.log(inputLength);
+                if(numLength > 0){
+                    const showModal = document.getElementById('show-modal');
+                    showModal.classList.remove('hidden');
+                }
+            })
+
+            
+
         }
 
         
